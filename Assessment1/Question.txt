@@ -1,0 +1,27 @@
+K-Arm Bandit Recommendation System
+Problem Statement
+To design a recommendation system using the K-Arm bandit framework.
+This recommendation system has multiple items, and each time a user interacts with the system, an item should be recommended. Over time, the system should learn which are preferred and adjust its recommendations accordingly. The goal is to model a trade-off between exploring and exploiting.
+
+For the K-Arm bandit problem where the system must balance exploration and exploitation, one solution is the epsilon-greedy method – an approach to handle the trade-off.
+The system has K items (arms), and each item has an unknown probability. Each time the system recommends an item, it observes whether the recommendation was successful (reward of 1) or not (reward of 0)). The goal is to maximise the cumulative rewards (successful recommendations) by finding the item with the highest recommendation probability.
+
+---
+
+Parameters:
+
+K is the number of items (arms) to recommend.
+epsilon is the exploration probability.
+num_rounds is the number of user interactions (total recommendations).
+Simulation Setup:
+
+True Probabilities: Each item has a randomly assigned "true probability" for a successful recommendation.
+Recommendation Function: Simulates user feedback by generating a success (1) or failure (0) based on the item’s true probability.
+Epsilon-Greedy Approach:
+
+Exploration: With probability epsilon, a random item is recommended.
+Exploitation: With probability 
+1−ϵ, the item with the highest estimated probability (highest average reward) is recommended.
+Reward Update:
+
+Each time a recommendation is made, update the count and reward for the chosen item. This helps the system learn the success rate of each item over time.

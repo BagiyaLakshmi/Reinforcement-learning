@@ -1,0 +1,4 @@
+reate a 100x100 grid with obstacles in between 2 random points. 
+Build an MDP based RL agent to optimise both policies and actions at 
+every state. Benchmark DP method with other RL solutions for the same
+ problem.
